@@ -1,0 +1,100 @@
+{
+  "transactions": [
+    {
+      "name": "kugfu",
+      "type": "income",
+      "amount": 34232,
+      "id": 18
+    },
+    {
+      "name": "gtrtrgtrg",
+      "type": "income",
+      "amount": 3232,
+      "id": 20
+    },
+    {
+      "name": "gtrtrryy",
+      "amount": 4554,
+      "type": "expense",
+      "id": 22
+    },
+    {
+      "name": "kukiuik",
+      "type": "income",
+      "amount": 887,
+      "id": 23
+    },
+    {
+      "name": "mkuku",
+      "type": "expense",
+      "amount": 78,
+      "id": 25
+    },
+    {
+      "name": "uimmkui,",
+      "type": "expense",
+      "amount": 45,
+      "id": 26
+    },
+    {
+      "name": "yujuiyjui",
+      "type": "expense",
+      "amount": 900,
+      "id": 27
+    },
+    {
+      "name": "uyju",
+      "type": "income",
+      "amount": 677,
+      "id": 28
+    },
+    {
+      "name": "edited",
+      "amount": 4554,
+      "type": "income",
+      "id": 29
+    },
+    {
+      "name": "trhrh",
+      "type": "expense",
+      "amount": 656,
+      "id": 30
+    },
+    {
+      "name": "uuu",
+      "type": "expense",
+      "amount": 675,
+      "id": 31
+    },
+    {
+      "name": "gyhy",
+      "type": "expense",
+      "amount": 6565,
+      "id": 32
+    },
+    {
+      "name": "yhnu",
+      "type": "income",
+      "amount": 1000,
+      "id": 33
+    },
+    {
+      "name": "tuition",
+      "type": "income",
+      "amount": 54,
+      "id": 35
+    },
+    {
+      "name": "first----hello",
+      "amount": 5000,
+      "type": "expense",
+      "id": 37
+    },
+    {
+      "name": "Job",
+      "type": "income",
+      "amount": 100000,
+      "id": 38
+    }
+  ]
+}
