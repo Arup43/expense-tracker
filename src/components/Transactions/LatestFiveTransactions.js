@@ -12,13 +12,9 @@ export default function LatestFiveTransactions() {
         (state) => state.transaction
     );
 
-    const {type} = useSelector((state) => state.filter);
-    const {search} = useSelector((state) => state.search);
-    const {selectedPage} = useSelector((state) => state.pagination);
-
     useEffect(() => {
-        dispatch(fetchTransactions({type, search, selectedPage}));
-    }, [dispatch, type, search, selectedPage]);
+        dispatch(fetchTransactions({type: "", search: "", selectedPage: 0}));
+    }, [dispatch]);
 
     // decide what to render
     let content = null;

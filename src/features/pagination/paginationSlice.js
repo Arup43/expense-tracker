@@ -1,7 +1,7 @@
 const { createSlice } = require("@reduxjs/toolkit");
 
 const initialState = {
-    selectedPage: 0
+    selectedPage: 1
 };
 
 const paginationSlice = createSlice({

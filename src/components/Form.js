@@ -4,7 +4,7 @@ import {
     changeTransaction,
     createTransaction,
 } from "../features/transaction/transactionSlice";
-
+import { editInActive } from "../features/transaction/transactionSlice";
 
 export default function Form() {
     const [name, setName] = useState("");
@@ -65,11 +65,13 @@ export default function Form() {
         );
         setEditMode(false);
         reset();
+        dispatch(editInActive());
     };
 
     const cancelEditMode = () => {
         reset();
         setEditMode(false);
+        dispatch(editInActive());
     };
 
     return (

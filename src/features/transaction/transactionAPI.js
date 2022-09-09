@@ -3,17 +3,17 @@ import axios from "../../utils/axios";
 export const getTransactions = async (type, search, selectedPage) => {
     let queryString = "";
 
+    if(selectedPage === 0) {
+        const response = await axios.get(`/transactions`);
+        return response;
+    }
+
     if(type !== "") {
         queryString += `type=${type}`;
     }
 
     if(search !== "") {
         queryString += `name_like=${search}`;
-    }
-
-    if(selectedPage === 0) {
-        const response = await axios.get(`/transactions`);
-        return response;
     }
 
     const response = await axios.get(`/transactions?${queryString}&_page=${selectedPage}&_limit=10`);
@@ -35,7 +35,7 @@ export const editTransaction = async (id, data) => {
 };
 
 export const deleteTransaction = async (id) => {
-    const response = axios.delete(`/transactions/${id}`);
+    const response = await axios.delete(`/transactions/${id}`);
 
     return response.data;
 };

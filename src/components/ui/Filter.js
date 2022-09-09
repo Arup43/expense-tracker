@@ -1,5 +1,5 @@
-import React from 'react'
-import { useDispatch } from 'react-redux'
+import React, { useEffect } from 'react'
+import { useDispatch, useSelector } from 'react-redux'
 import { typeSelected } from '../../features/filter/filterSlice';
 import { searchKeyEntered } from '../../features/search/searchSlice';
 import { pageSelected } from '../../features/pagination/paginationSlice';
@@ -9,6 +9,14 @@ export default function Filter() {
     const dispatch = useDispatch();
     const [search, setSearch] = React.useState("");
     const [type, setType] = React.useState("");
+
+    const selectedType = useSelector((state) => state.filter.type);
+    const searchedKey = useSelector((state) => state.search.search);
+
+    useEffect(() => {
+        setSearch(searchedKey);
+        setType(selectedType);
+    }, [searchedKey, selectedType]);
 
     const selectType = (type) => {
         setType(type);

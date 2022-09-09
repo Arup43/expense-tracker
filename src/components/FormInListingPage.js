@@ -4,6 +4,8 @@ import {
     changeTransaction,
 } from "../features/transaction/transactionSlice";
 
+import { editInActive } from "../features/transaction/transactionSlice";
+
 export default function FormInListingPage() {
     const [name, setName] = useState("");
     const [type, setType] = useState("");
@@ -48,17 +50,19 @@ export default function FormInListingPage() {
         );
         setEditMode(false);
         reset();
+        dispatch(editInActive());
     };
 
     const cancelEditMode = () => {
         reset();
         setEditMode(false);
+        dispatch(editInActive());
     };
 
     return (
         editMode ? (
             <div className="form">
-                <h3>Add new transaction</h3>
+                <h3>Update Transaction</h3>
 
                 <form onSubmit={handleUpdate}>
                     <div className="form-group">

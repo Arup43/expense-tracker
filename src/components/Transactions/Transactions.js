@@ -1,13 +1,11 @@
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchTransactions } from "../../features/transaction/transactionSlice";
-import Transaction from "./Transaction";
 import FormInListingPage from "../FormInListingPage";
+import Transaction from "./Transaction";
 
 export default function Transactions() {
     const dispatch = useDispatch();
-
-    
 
     const { transactions, isLoading, isError } = useSelector(
         (state) => state.transaction
